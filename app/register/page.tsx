@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 
 export default function RegisterPage() {
   return (
-    <main className="relative flex min-h-screen flex-col items-center justify-center p-4 sm:p-6 bg-gray-50">
+    <main className="relative flex min-h-screen flex-col items-center justify-center p-4 sm:p-6 bg-gray-50 overflow-x-hidden w-full">
       
       {/* Botão Voltar */}
       <Link 

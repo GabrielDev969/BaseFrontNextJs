@@ -16,16 +16,16 @@ export function Header() {
 
   return (
     <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-14 sm:h-16 items-center justify-between px-3 sm:px-4 lg:px-8 max-w-full overflow-hidden">
         
         {/* Logo */}
-        <Link href={user ? '/dashboard' : '/'} className="flex items-center gap-2 flex-shrink-0">
-          <div className={`h-7 w-7 sm:h-8 sm:w-8 rounded-lg flex items-center justify-center text-white font-bold text-sm sm:text-base ${
+        <Link href={user ? '/dashboard' : '/'} className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0 min-w-0">
+          <div className={`h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 rounded-lg flex items-center justify-center text-white font-bold text-xs sm:text-sm lg:text-base flex-shrink-0 ${
             isAdmin ? 'bg-red-600' : 'bg-blue-600'
           }`}>
             LP
           </div>
-          <span className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 whitespace-nowrap">CleanNext</span>
+          <span className="text-sm sm:text-base lg:text-lg xl:text-xl font-bold text-gray-900 whitespace-nowrap truncate">CleanNext</span>
         </Link>
 
         {/* Navegação Desktop - Apenas em telas grandes */}

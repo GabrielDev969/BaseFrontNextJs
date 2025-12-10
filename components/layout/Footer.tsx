@@ -7,8 +7,8 @@ export function Footer() {
               © {new Date().getFullYear()} Base Project Next. Todos os direitos reservados.
             </p>
             <div className="flex gap-4 sm:gap-6">
-              <a href="https://github.com/GabrielDev969" className="text-xs sm:text-sm text-gray-400 hover:text-gray-600 transition-colors">Github</a>
-              <a href="#" className="text-xs sm:text-sm text-gray-400 hover:text-gray-600 transition-colors">Twitter</a>
+              <a href="https://github.com/GabrielDev969" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-400 hover:text-gray-600 transition-colors">Github</a>
+              <a href="https://www.linkedin.com/in/gabriel-santos-b53632196/" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-gray-400 hover:text-gray-600 transition-colors">Linkedin</a>
             </div>
           </div>
         </div>
