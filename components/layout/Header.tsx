@@ -30,10 +30,12 @@ export function Header() {
 
         {/* Navegação Desktop - Apenas em telas grandes */}
         {!user && !isDashboard && (
-          <nav className="hidden lg:flex gap-4 xl:gap-6 text-sm font-medium text-gray-600">
+          <nav className="hidden lg:flex gap-3 xl:gap-4 text-xs lg:text-sm font-medium text-gray-600">
             <Link href="#features" className="hover:text-blue-600 transition whitespace-nowrap">Funcionalidades</Link>
-            <Link href="#pricing" className="hover:text-blue-600 transition whitespace-nowrap">Preços</Link>
-            <Link href="#about" className="hover:text-blue-600 transition whitespace-nowrap">Sobre</Link>
+            <Link href="#about" className="hover:text-blue-600 transition whitespace-nowrap">Sobre o Projeto</Link>
+            <Link href="#setup" className="hover:text-blue-600 transition whitespace-nowrap">Como Configurar</Link>
+            <Link href="#developer" className="hover:text-blue-600 transition whitespace-nowrap">Desenvolvedor</Link>
+            <Link href="#contributors" className="hover:text-blue-600 transition whitespace-nowrap">Colaboradores</Link>
           </nav>
         )}
 
@@ -197,11 +199,17 @@ export function Header() {
                     <Link href="#features" className="text-sm font-medium text-gray-700 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>
                       Funcionalidades
                     </Link>
-                    <Link href="#pricing" className="text-sm font-medium text-gray-700 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>
-                      Preços
-                    </Link>
                     <Link href="#about" className="text-sm font-medium text-gray-700 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>
-                      Sobre
+                      Sobre o Projeto
+                    </Link>
+                    <Link href="#setup" className="text-sm font-medium text-gray-700 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>
+                      Como Configurar
+                    </Link>
+                    <Link href="#developer" className="text-sm font-medium text-gray-700 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>
+                      Desenvolvedor
+                    </Link>
+                    <Link href="#contributors" className="text-sm font-medium text-gray-700 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>
+                      Colaboradores
                     </Link>
                   </nav>
                 )}
