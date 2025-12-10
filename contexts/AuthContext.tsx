@@ -27,7 +27,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   async function loadUserFromStorage() {
+    // Verifica se há tokens antes de chamar /me
+    // Como os tokens são httpOnly, verificamos se há dados no localStorage
+    // Se não houver dados salvos, não faz sentido chamar a API
+    const storedUser = localStorage.getItem('auth.user');
+    
+    // Se não há dados salvos, assume que não está logado
+    if (!storedUser) {
+      setUser(null);
+      setIsLoading(false);
+      return;
+    }
+
     try {
+      // Só chama /me se houver dados salvos (indica que pode estar logado)
       const user = await authService.me();
       setUser(user);
       localStorage.setItem('auth.user', JSON.stringify(user));
@@ -40,7 +53,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         localStorage.removeItem('auth.user');
         router.push('/login?session=expired');
       } else {
-        const storedUser = localStorage.getItem('auth.user');
+        // Se der erro e não for sessão expirada, tenta usar dados salvos
         if (storedUser) {
           try {
             const user = JSON.parse(storedUser);
